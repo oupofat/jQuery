@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Home Page</title>
+</head>
+
+<body>
+    <h1 id="header">My Home Page</h1>
+    <button id="uppercase">Uppercase</button>
+    <button id="lowercase">Lowercase</button>
+    <button id="multiply">Multiply</button>
+    <button id="divide">Divide</button>
+    <p id="paragraph">Welcome to my humble abode.</p>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $("#uppercase").on("click", function() {
+        let existingText = $("#header").text();
+        $("#header").text(existingText.toUpperCase());
+    });
+    $("#lowercase").on("click", function() {
+        let existingText = $("#header").text();
+        $("#header").text(existingText.toLowerCase());
+    });
+    $("#multiply").on("click", function() {
+        let existingText = $("#header").text();
+        $("#header").text(existingText + existingText);
+    });
+    $("#divide").on("click", function(){
+        let existingText = $("#header").text();
+        $("#header").text(existingText - );
+    });
+
+
+
+    function reverse(text) {
+        let reversed = "";
+        let chars = text.split("");
+        chars.forEach(function(char) {
+            reversed = char + reversed;
+        });
+        return reversed;
+    }
+
+    $("#header").on("click", function() {
+        let existingText = $("#header").text();
+        $("#header").text(reverse(existingText));
+        console.log("You clicked on the header!!");
+    });
+</script>
+</html>
