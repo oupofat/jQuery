@@ -18,11 +18,10 @@
 </body>
 <script src="jquery.js"></script>
 <script>
- //*   $("#piglatin").on("click", function(){
-//        let phrase = $("#header").text();
-//        breakToPhrase(phrase)
-//        $("#header").text(phrase);
-    $("#piglatin").on("click",function convertToPigLatin(word) {
+    $("#piglatin").on("click", function(){
+        let phrase = $("#header").text();
+        $("#header").text(breakToPhrase(phrase));
+        function convertToPigLatin(word) {
         let vowels = ["a", "e", "i", "i", "o", "u"];
         let pigword = "";
         let state = "collect-consonants";
