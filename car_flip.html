@@ -11,8 +11,16 @@
 </body>
 <script src="jquery.js"></script>
 <script>
-     $("#card").on("click", function() {
-        $("#card").attr("src", "images/ace_of_spades.png");
+    $("#card").on("click", function() {
+        function(card) {
+            if (let card of "images/card_back.png") {
+                $("#card").attr("src", "images/ace_of_spades.png")
+            } else {
+                $("#card").attr("src", "images/card_back.png");
+            }
+        }
+
+
     });
 </script>
 </html>
