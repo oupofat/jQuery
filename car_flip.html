@@ -6,21 +6,23 @@
 </head>
 
 <body>
+    <h1 id="header">My Home Page</h1>
+    <p id="paragraph">Welcome to my humble abode.</p>
     <img id="card" src="images/card_back.png" alt="A Poker Card">
 
 </body>
 <script src="jquery.js"></script>
 <script>
+    let state = "back";
     $("#card").on("click", function() {
-        function(card) {
-            if (let card of "images/card_back.png") {
-                $("#card").attr("src", "images/ace_of_spades.png")
-            } else {
-                $("#card").attr("src", "images/card_back.png");
-            }
+        if (state === "back") {
+            $("#card").attr("src", "images/ace_of_spades.png");
+            state = "front";
+        } else if (state === "front") {
+            $("#card").attr("src", "images/card_back.png");
+            state = "back";
         }
-
-
+        return ("#card")
     });
 </script>
 </html>
