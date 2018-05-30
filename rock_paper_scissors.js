@@ -8,21 +8,31 @@ while (true) {
     if (player === "rock") {
         if (computer === "paper")
             totalComputer += 1;
-     else 
-        totalPlayer += 1;
+        else if (computer === "rock") {} 
+        else
+            totalPlayer += 1;
     }
     if (player === "paper") {
         if (computer === "scissors")
             totalComputer += 1;
-     else 
-        totalPlayer += 1;
+        else if (computer === "scissors") {} 
+        else
+            totalPlayer += 1;
     }
     if (player === "scissors") {
         if (computer === "rock")
             totalComputer += 1;
-     else 
-        totalPlayer += 1;
+        else if (computer === "scissors") {} 
+        else
+            totalPlayer += 1;
     }
 
     break;
 };
+if (totalPlayer > totalComputer){
+    console.log("you win!")
+} else if (totalPlayer < totalComputer) {
+    console.log("you lose!")
+} else {
+    console.log ("Its a tie!")
+}
