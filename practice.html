@@ -28,7 +28,7 @@
     $("#play-rock").on("click", function() {
         let computer = playComputerMove();
         $("#computer-move").text(computer);
-        //console.log(computer);
+        console.log(typeof computer);
         $("#player-move").text("rock");
         let player = "rock";
 
@@ -38,7 +38,7 @@
     $("#play-paper").on("click", function() {
         let computer = playComputerMove();
         $("#computer-move").text(computer);
-        console.log(computer);
+        //console.log(computer);
         $("#player-move").text("paper");
         let player = "paper";
 
@@ -48,7 +48,7 @@
     $("#play-scissors").on("click", function() {
         let computer = playComputerMove();
         $("#computer-move").text(computer);
-        console.log(computer);
+        //console.log(computer);
         $("#player-move").text("scissors");
         let player = "scissors";
 
@@ -66,23 +66,23 @@
     function findWinner(player, computer) {
         if (player === "rock" && computer === "paper") {
             $("#game-result").text("you lose");
-        } else if (computer === "rock") {
+        } else if (computer === "rock" && player === "rock") {
             $("#game-result").text("It's a tie!");
-        } else {
+        } else if (player === "rock" && computer === "scissors"){
             $("#game-result").text("You Win!");
         }
         if (player === "paper" && computer === "scissors") {
             $("#game-result").text("You lose!");
-        } else if (computer === "paper") {
+        } else if (player === "paper" && computer === "paper") {
             $("#game-result").text("It's a tie!");
-        } else {
+        } else if (player ==="paper" && computer === "rock") {
             $("#game-result").text("You win!");
         }
         if (player === "scissors" && computer === "rock") {
             $("#game-result").text("You lose!");
-        } else if (computer === "scissors") {
+        } else if (computer === "scissors" && player === "scissors") {
             $("#game-result").text("It's a tie!");
-        } else {
+        } else if (player === "scissors" && computer === "paper"){
             $("#game-result").text("You win!");
         }
     };
